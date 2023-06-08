@@ -1,4 +1,4 @@
-<h1 style="text-align:center; font-weight:bolder;">Catatan Sebelum Melakukan Kloning Job Calling</h1>
+<h1 style="text-align:center; font-weight:bolder;">Catatan Sebelum Melakukan Kloning</h1>
 
 ## Beberapa Catatan Terkait Penggunaan Repository Ini
 1. Silahkan melakukan kloning pada repository ini dengan meng-copy url repository
@@ -26,14 +26,3 @@
         ```shell
         composer require --dev barryvdh/laravel-ide-helper
         ```
-    - Doctrine/dbal
-        ```shell
-        composer require doctrine/dbal
-        ```
-
-4. Untuk halaman admin bisa menggunakan template
-    <ul>
-        <li> <a href="https://getstisla.com/">STISLA</a></li>
-        <li> <a href="https://coreui.io/">Core UI</a></li>
-        <li> <a href="https://adminlte.io/">Admin LTE</a></li>
-    <ul>
