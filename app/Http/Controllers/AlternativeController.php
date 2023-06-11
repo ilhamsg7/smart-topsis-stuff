@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Alternative;
 use Illuminate\Http\Request;
+use App\Imports\AlternativeImport;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Maatwebsite\Excel\Facades\Excel;
 use Yajra\DataTables\Facades\DataTables;
 use App\Http\Requests\AlternativeRequest;
 
@@ -68,5 +70,11 @@ class AlternativeController extends Controller
             DB::rollBack();
             return redirect()->back()->with('failed', 'Alternatif gagal diubah');
         }
+    }
+
+    public function import()
+    {
+        Excel::import(new AlternativeImport, request()->file('file'));
+        return back();
     }
 }

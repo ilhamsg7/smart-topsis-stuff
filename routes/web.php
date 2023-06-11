@@ -15,6 +15,7 @@ Route::prefix('criteria')->as('criteria.')->group(function () {
     Route::post('/', [CriterionController::class, 'store'])->name('store');
     Route::put('/{criterion:id}', [CriterionController::class, 'update'])->name('update');
     Route::delete('/{criterion:id}/delete', [CriterionController::class, 'destroy'])->name('destroy');
+    Route::post('/import', [CriterionController::class, 'import'])->name('import');
 });
 
 Route::prefix('alternatives')->as('alternatives.')->group(function () {
@@ -22,4 +23,5 @@ Route::prefix('alternatives')->as('alternatives.')->group(function () {
     Route::post('/', [AlternativeController::class, 'store'])->name('store');
     Route::put('/{alternative:id}', [AlternativeController::class, 'update'])->name('update');
     Route::delete('/{alternative:id}/delete', [AlternativeController::class, 'destroy'])->name('destroy');
+    Route::post('/import', [AlternativeController::class, 'import'])->name('import');
 });

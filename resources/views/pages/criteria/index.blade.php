@@ -37,6 +37,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
+
         <div class="row">
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <h3>Wishub Criteria</h3>
@@ -47,11 +48,11 @@
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
                     <i class="fa-solid fa-plus"></i> Add Data
                 </button>
-                <form method="post" enctype="multipart/form-data" class="flex items-center col-span-3">
+                <form method="post" action="{{ route('criteria.import') }}" enctype="multipart/form-data" class="flex items-center col-span-3">
                     @csrf
                     <input type="file" id="file" name="file" required
                         class="text-sm rounded-l-md cursor-pointer">
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                    <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
                         <i class="fa-sharp fa-solid fa-arrow-down"></i> Import Excel
                     </button>
                 </form>

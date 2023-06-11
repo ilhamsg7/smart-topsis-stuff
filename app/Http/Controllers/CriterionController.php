@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Criterion;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\CriteriaRequest;
+use App\Imports\CriteriaImport;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Validator;
+use App\Http\Controllers\Controller;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Requests\CriteriaRequest;
 use Yajra\DataTables\Facades\DataTables;
+use Illuminate\Support\Facades\Validator;
 
 class CriterionController extends Controller
 {
@@ -80,6 +82,12 @@ class CriterionController extends Controller
             DB::rollBack();
             return redirect()->back()->with('failed', 'Kriteria gagal diubah');
         }
+    }
+
+    public function import()
+    {
+        Excel::import(new CriteriaImport, request()->file('file'));
+        return back();
     }
 
     public function destroy(Criterion $criterion)
