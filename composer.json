@@ -11,9 +11,13 @@
         "laravel/framework": "^9.0",
         "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.7",
-        "maatwebsite/excel": "^1.1"
+        "maatwebsite/excel": "3.1.48",
+        "yajra/laravel-datatables": "9.0"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.8",
+        "barryvdh/laravel-ide-helper": "^2.13",
+        "beyondcode/laravel-query-detector": "^1.7",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
