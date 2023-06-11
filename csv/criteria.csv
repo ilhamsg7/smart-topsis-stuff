@@ -1,0 +1,7 @@
+name;weight;normalization;type
+Jumlah SMU/K;100;0,29;benefit
+Jumlah Murid SMU/K;80;0,23;benefit
+Pendapatan perkapita (ribu);60;0,17;benefit
+Jumlah mahasiswa di UM Pontianak;50;0,14;benefit
+Jarak tempuh (km);40;0,11;cost
+Biaya (Rp);20;0,06;cost
