@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Database\Seeders\CombineSeeder;
 use Database\Seeders\CriterionSeeder;
 use Database\Seeders\AlternativeSeeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -19,6 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             AlternativeSeeder::class,
             CriterionSeeder::class,
+            // CombineSeeder::class,
         ]);
     }
 }

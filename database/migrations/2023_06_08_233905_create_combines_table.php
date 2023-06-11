@@ -19,7 +19,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(Alternative::class)->onDelete('cascade');
             $table->foreignIdFor(Criterion::class)->onDelete('cascade');
-            $table->double('value', 8, 4)->nullable();
+            $table->integer('value')->nullable();
             $table->timestamps();
         });
     }

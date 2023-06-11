@@ -12,6 +12,11 @@ class Combine extends Model
     use HasFactory;
 
     protected $guarded = [];
+    protected $with = ['alternative', 'criterion'];
+
+    public function getTableColumns() {
+        return $this->getConnection()->getSchemaBuilder()->getColumnListing($this->getTable());
+    }
 
     public function alternative() {
         return $this->belongsTo(Alternative::class);

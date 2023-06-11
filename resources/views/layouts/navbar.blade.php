@@ -19,7 +19,10 @@
                     <a class="nav-link {{ ($active === "alternatives") ? 'active' : '' }}" href="{{ route('alternatives.index') }}">Alternative</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Result</a>
+                    <a class="nav-link {{ ($active === "combine") ? 'active' : '' }}" href="{{ route('combine.index') }}">Combine</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ ($active === "result") ? 'active' : '' }}" href="{{ route('result.index') }}">Result</a>
                 </li>
             </ul>
         </div>

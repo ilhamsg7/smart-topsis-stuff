@@ -2,8 +2,7 @@
 
 namespace App\Imports;
 
-use App\Models\Alternative;
-use App\Models\Criterion;
+use App\Models\Combine;
 use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\ToCollection;
@@ -19,15 +18,14 @@ class DataImport implements ToModel, WithHeadingRow
     }
 
     public function model(array $row) {
-        new Alternative([
-            'name'     => $row['name'],
+        return new Combine([
+            'alternative_id'    => $row['alternative_id'],
+            'criterion_id'      => $row['criterion_id'],
+            'value'             => $row['value'],
+            'created_at'        => now(),
+            'updated_at'        => now(),
         ]);
 
-        new Criterion([
-            'name'     => $row['name'],
-            'weight'     => $row['weight'],
-        ]);
-
-        return back()->with('importSuccess', 'Data berhasil diimport!');
+        return back()->with('success', 'Data berhasil diimport!');
     }
 }

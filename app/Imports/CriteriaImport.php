@@ -20,7 +20,7 @@ class CriteriaImport implements ToModel, WithHeadingRow
 
     public function model(array $row)
     {
-        $criteion = new Criterion([
+        return new Criterion([
             'name'              => $row['name'],
             'weight'            => $row['weight'],
             'normalization'     => $row['normalization'] ?? 0,
