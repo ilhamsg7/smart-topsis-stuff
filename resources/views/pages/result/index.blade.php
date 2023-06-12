@@ -14,7 +14,7 @@
 @section('content')
     <div class="container">
         <div class="row mb-3 mt-2">
-            <h3>Step 1: Normalisasi Matriks</h3>
+            <h3>Step 1: Normalisasi Matriks (Nilai Utilitas)</h3>
             <div class="table-responsive mt-2">
                 <table class="table table-hover table-bordered" id="criteria_table">
                     <thead>
