@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-md">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-md">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="{{ asset('image/WISHUB LOGO.png') }}" alt="Logo" width="75" height="24" class="d-inline-block align-text-top img-fluid">
+            <img src="{{ asset('image/DARK WISHUB LOGO.png') }}" alt="Logo" width="75" height="24" class="d-inline-block align-text-top img-fluid">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

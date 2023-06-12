@@ -12,7 +12,7 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid mt-4">
+    <div class="container mt-4">
         @if ($errors->any())
             @foreach ($errors->all() as $error)
                 <div class="alert alert-danger alert-dismissible mt-3 mx-3 fade show py-3 px-3 position-fixed-alert"
@@ -61,13 +61,13 @@
                 </div>
             </div>
             <div class="table-responsive mt-4">
-                <table class="table table-hover table-bordered" id="criteria_table">
+                <table class="table table-responsive table-hover table-bordered" id="criteria_table">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Alternative</th>
+                            <th class="text-nowrap" scope="col">#</th>
+                            <th class="text-nowrap" scope="col">Alternative</th>
                             @foreach ($column as $columns)
-                                <th scope="col">{{ $columns->name }}</th>
+                                <th class="text-nowrap" scope="col">{{ $columns->name }}</th>
                             @endforeach
                             <th scope="col">Action</th>
                         </tr>
@@ -76,11 +76,11 @@
                         @foreach ($data->groupBy('alternative_id') as $alternativeId => $groupedData)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $alternativeNames[$alternativeId] }}</td>
+                                <td class="text-nowrap">{{ $alternativeNames[$alternativeId] }}</td>
                                 @foreach ($groupedData as $data)
                                     <td>{{ $data->value }}</td>
                                 @endforeach
-                                <td>
+                                <td class="text-nowrap">
                                     <a href="#" class="btn btn-sm btn-icon btn-primary edit-btn"
                                         @foreach ($data as $key => $datas)
                                             data-{{ $key }}="{{ $datas }}" @endforeach
